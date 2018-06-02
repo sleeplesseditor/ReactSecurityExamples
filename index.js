@@ -1,7 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import EscapeInput from './components/EscapeInput';
+import DangerousHTML from './components/DangerousHTML';
+
 render(
-    <div>Security in React</div>,
+    <div>
+        <hr />
+        <EscapeInput />
+        <hr />
+        <DangerousHTML />
+    </div>,
     document.getElementById('root')
 ); 
