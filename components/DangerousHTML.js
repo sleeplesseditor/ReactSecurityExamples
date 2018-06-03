@@ -6,6 +6,12 @@ const goo = `<a href='javascript:alert("XSS");'>Click Me</a>`;
 
 //Demonstration of dangerously set InnerHTML issues
 class DangerousHTML extends Component {
+    componentDidMount() {
+        const s = document.createElement('script');
+        s.innerHTML = "console.log('XSS created with innerHTML')";
+        document.getElementById('danger-div').appendChild(s);
+    }
+
     render() {
         return (
             <div id="danger-div">

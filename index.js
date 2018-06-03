@@ -1,8 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-
-import EscapeInput from './components/EscapeInput';
-import DangerousHTML from './components/DangerousHTML';
+import { DangerousHTML, EscapeInput, Eval, UserHref } from './components';
 
 render(
     <div>
@@ -10,6 +8,10 @@ render(
         <EscapeInput />
         <hr />
         <DangerousHTML />
+        <hr />
+        <UserHref />
+        <hr />
+        <Eval />
     </div>,
     document.getElementById('root')
 ); 
